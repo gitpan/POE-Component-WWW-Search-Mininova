@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/POE-Component-WWW-Search-Mininova.t
+lib/POE/Component/WWW/Search/Mininova.pm

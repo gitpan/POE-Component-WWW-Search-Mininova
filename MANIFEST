@@ -4,3 +4,4 @@ MANIFEST
 README
 t/POE-Component-WWW-Search-Mininova.t
 lib/POE/Component/WWW/Search/Mininova.pm
+META.yml                                 Module meta-data (added by MakeMaker)

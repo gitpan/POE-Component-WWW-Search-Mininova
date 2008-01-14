@@ -3,7 +3,7 @@ package POE::Component::WWW::Search::Mininova;
 use 5.008008;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use WWW::Search::Mininova;
 
@@ -18,6 +18,9 @@ sub spawn {
 
     my %args = @_;
     $args{ lc $_ } = delete $args{ $_ } for keys %args;
+
+    delete $args{options}
+        unless ref $args{options} eq 'HASH';
 
     eval {
         require WWW::Search::Mininova;
@@ -55,7 +58,6 @@ sub spawn {
 
 sub _start {
     my ( $kernel, $self ) = @_[ KERNEL, OBJECT ];
-    $self->{session_id} = $_[SESSION]->ID;
 
     if ( $self->{alias} ) {
         $kernel->alias_set( $self->{alias} );
@@ -110,7 +112,7 @@ sub _search {
         $args = { %{ $_[ARG0] } };
     }
     else {
-        carp "Arguments must be passed in a hashref... trying to adjust";
+        warn "Arguments must be passed in a hashref... trying to adjust";
         $args = { @_[ ARG0..$#_ ] };
     }
 
@@ -118,11 +120,13 @@ sub _search {
         for grep { $_ !~ /^_/ } keys %{ $args };
 
     unless ( $args->{event} ) {
-        carp "No event to send output to was specified";
+        warn "No event to send output to was specified";
+        return;
     }
 
     unless ( $args->{term} ) {
-        carp "No search term specified";
+        warn "No search term specified";
+        return;
     }
 
     if ( $args->{session} ) {
@@ -130,7 +134,7 @@ sub _search {
             $args->{sender} = $session_ref->ID;
         }
         else {
-            carp "Could not resolve ``session`` to a valid POE session";
+            warn "Could not resolve ``session`` to a valid POE session";
             return;
         }
     }
@@ -138,7 +142,7 @@ sub _search {
         $args->{sender} = $sender;
     }
     
-    $kernel->refcount_increment( $sender => __PACKAGE__ );
+    $kernel->refcount_increment( $args->{sender} => __PACKAGE__ );
     
     $self->{wheel}->put( $args );
 }

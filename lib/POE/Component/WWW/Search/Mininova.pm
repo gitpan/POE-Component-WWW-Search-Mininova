@@ -3,7 +3,7 @@ package POE::Component::WWW::Search::Mininova;
 use 5.008008;
 use strict;
 use warnings;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use WWW::Search::Mininova;
 
@@ -58,7 +58,8 @@ sub spawn {
 
 sub _start {
     my ( $kernel, $self ) = @_[ KERNEL, OBJECT ];
-
+    $self->{session_id} = $_[SESSION]->ID();
+    
     if ( $self->{alias} ) {
         $kernel->alias_set( $self->{alias} );
     }

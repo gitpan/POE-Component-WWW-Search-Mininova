@@ -1,5 +1,8 @@
 Revision history for Perl extension POE::Component::WWW::Search::Mininova.
 
+0.03  Sat Feb  2 12:38:00 2008
+	- fixed session ID bug
+
 0.02  Sat Jan 12 10:15:00 2008
 	- fixed the bug with sending output to another session
 

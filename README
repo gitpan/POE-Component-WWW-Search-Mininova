@@ -1,40 +1,40 @@
-POE-Component-WWW-Search-Mininova version 0.03
-==============================================
-
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
-
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+POE-Component-WWW-Search-Mininova
 
 INSTALLATION
 
-To install this module type the following:
+To install this module, run the following commands:
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
 
-DEPENDENCIES
+SUPPORT AND DOCUMENTATION
 
-This module requires these other modules and libraries:
+After installing, you can find documentation for this module with the
+perldoc command.
 
-  POE and WWW::Search::Minova
+    perldoc POE::Component::WWW::Search::Mininova
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=POE-Component-WWW-Search-Mininova
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/POE-Component-WWW-Search-Mininova
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/POE-Component-WWW-Search-Mininova
+
+    Search CPAN
+        http://search.cpan.org/dist/POE-Component-WWW-Search-Mininova
+
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
+Copyright (C) 2008 Zoffix Znet
 
-Copyright (C) 2008 by Zoffix Znet
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.8 or,
-at your option, any later version of Perl 5 you may have available.
-
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
 

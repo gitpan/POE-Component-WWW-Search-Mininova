@@ -1,7 +1,12 @@
+Build.PL
 Changes
-Makefile.PL
 MANIFEST
 README
-t/POE-Component-WWW-Search-Mininova.t
 lib/POE/Component/WWW/Search/Mininova.pm
-META.yml                                 Module meta-data (added by MakeMaker)
+examples/mini.pl
+t/00-load.t
+t/pod-coverage.t
+t/pod.t
+t/kwalitee.t
+Makefile.PL
+META.yml

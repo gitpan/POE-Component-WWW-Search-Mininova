@@ -1,12 +1,16 @@
-Revision history for Perl extension POE::Component::WWW::Search::Mininova.
+Revision history for POE-Component-WWW-Search-Mininova
+
+0.04  Sun Feb 10 10:40:00 2008
+    - fixed some distro issues,
+        added more tests and
+        examples/mini.pl
 
 0.03  Sat Feb  2 12:38:00 2008
-	- fixed session ID bug
+    - fixed session ID bug
 
 0.02  Sat Jan 12 10:15:00 2008
-	- fixed the bug with sending output to another session
+    - fixed the bug with sending output to another session
 
 0.01  Thu Jan 10 00:05:45 2008
-	- original version; created by h2xs 1.23 with options
-		-X -n POE::Component::WWW::Search::Mininova -v 0.01
+        First version, released on an unsuspecting world.
 

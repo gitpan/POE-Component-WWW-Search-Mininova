@@ -1,18 +1,28 @@
---- #YAML:1.0
-name:                POE-Component-WWW-Search-Mininova
-version:             0.03
-abstract:            non-blocking POE wrapper for
-license:             ~
-author:              
-    - Zoffix Znet <zoffix@cpan.org>
-generated_by:        ExtUtils::MakeMaker version 6.42
-distribution_type:   module
-requires:     
-    POE:                           0.9999
-    POE::Filter::Line:             1.192
-    POE::Filter::Reference:        1.2187
-    POE::Wheel::Run:               1.2179
-    WWW::Search::Mininova:         0.02
+---
+name: POE-Component-WWW-Search-Mininova
+version: 0.04
+author:
+  - 'Zoffix Znet <zoffix@cpan.org>'
+abstract: |-
+  non-blocking POE wrapper for
+  WWW::Search::Mininova
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Carp: 1.04
+  POE: 0.9999
+  POE::Filter::Line: 1.192
+  POE::Filter::Reference: 1.2187
+  POE::Wheel::Run: 1.2179
+  WWW::Search::Mininova: 0.05
+build_requires:
+  Test::More: 0
+provides:
+  POE::Component::WWW::Search::Mininova:
+    file: lib/POE/Component/WWW/Search/Mininova.pm
+    version: 0.04
+generated_by: Module::Build version 0.2808
 meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
-    version: 1.3
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
